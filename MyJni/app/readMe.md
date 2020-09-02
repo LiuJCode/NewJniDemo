@@ -25,12 +25,12 @@ JNI注册native方法：
     创建一个接口类，定义Native方法
 5.编写JNI函数
     意思就是说第4项定义的java Native方法需要转换成JNI函数。
-    （1）.可以按照参考格式在（第2项文件）中手写，（大概格式是包名+方法名）
+    （1）.可以按照cd参考格式在（第2项文件）中手写，（大概格式是包名+方法名）
     （2）.通过命令生成.h文件，再复制到（第2项）创建的文件中。
         a.AS在Terminal控制台，进入定义的Demo.java的Native文件目录
         b.执行 ‘javac Demo.java’,(如果报错证明类中有中文，可以去除中文)
         c.执行完后，目录下会生成Demo.class
-        d.切回到工程的java目录，执行‘javah -classpath . -jni+包名+文件名’ 生成.h文件
+        d.切回到工程的java目录，执行‘javah -classpath . -jni 包名+文件名’ 生成.h文件
             (比如：javah -classpath . -jni com.my.myjni.jni.Demo)
         e.将生成的.h文件内容复制到（第二项创建的文件中），这时候Demo.java中的方法名称不再是红色（表示生成的方法和配置正确） (需要make Project 一下才能不显示红色)
 6.实现JNI函数调用C++函数实现逻辑
