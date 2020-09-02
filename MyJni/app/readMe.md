@@ -1,4 +1,4 @@
-JNI注册native方法：
+﻿JNI注册native方法：
 注册native大概总结下就是JAVA类中的native方法在CPP/C中生成对应的方法。
 1.静态注册
     生成的方法都是以包名、类名、方法名组成，其之间的点用下划线代替，包名、类名、方法名都必须与java文件中声明的native方法完全一致。
@@ -37,3 +37,6 @@ JNI注册native方法：
     (1).在JNI层次（第二项创建的文件）引入C++逻辑类 （demo.cpp）
     (2).修改生成的jni函数的参数，跟java层的Native方法参数一致
 7.在Android中调用Native方法即可。
+
+
+JNI学习demo,学习如何配置工程
